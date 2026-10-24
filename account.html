@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Карамелия — авторские торты и десерты ручной работы." />
+    <title>Карамелия — авторская кондитерская</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/account.css" />
+    <link rel="icon" type="image/x-icon" href="assets/branding/favicon.ico">
+</head>
+<style>
+
+</style>
+
+<body>
+    <main>
+        <div class="inner-page">
+            <header class="site-header">
+                <a class="brand" href="index.html"><span class="brand-fallback">КАРАМЕЛИЯ</span><img
+                        src="assets//branding/logo.png" alt="Карамелия"
+                        onerror="this.style.display='none'; this.previousElementSibling.style.display='inline';" /></a>
+                <nav class="main-nav"><a class="nav-link" href="index.html">ГЛАВНАЯ</a><a class="nav-link "
+                        href="about.html">О НАС</a><a class="nav-link" href="catalog.html">НАШИ ВКУСНОСТИ</a><a
+                        class="nav-link" href="account.html#footer">КОНТАКТЫ</a></nav>
+                <div class="header-actions"><a class="icon-btn" href="basket.html" aria-label="Корзина"><svg
+                            viewBox="0 0 24 24">
+                            <path d="M6 7h12l-1 12H7L6 7Zm3 0a3 3 0 0 1 6 0" />
+                            <path d="M4 7h16" />
+                        </svg></a><a class="icon-btn" href="account.html" aria-label="Профиль"><svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="3.5" />
+                            <path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5" />
+                        </svg></a></div>
+                <a class="phone-link" href="tel:+79615495614">+7 961 549 56 14</a>
+
+                <!-- КНОПКА: внутри header, но вне других блоков -->
+                <button class="mobile-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </header>
+
+            <!-- МЕНЮ: СНАРУЖИ header, сразу после него -->
+            <div class="mobile-menu" aria-hidden="true">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="about.html">О НАС</a>
+                <a href="catalog.html">НАШИ ВКУСНОСТИ</a>
+                <a href="index.html#footer">КОНТАКТЫ</a>
+                <a href="tel:+79615495614">+7 961 549 56 14</a>
+            </div>
+
+            <section class="account-shell" aria-label="Личный кабинет">
+                <!-- =====================================================
+           НЕЗАРЕГИСТРИРОВАННЫЙ: ВХОД / РЕГИСТРАЦИЯ
+           ===================================================== -->
+                <div id="authView" class="account-auth">
+                    <section class="auth-panel" aria-label="Авторизация">
+                        <div class="auth-switch" role="tablist" aria-label="Выбор режима">
+                            <button type="button" class="is-active" data-mode="login">Войти</button>
+                            <button type="button" data-mode="register">Регистрация</button>
+                        </div>
+
+                        <p class="auth-kicker">Личный кабинет Карамелии</p>
+                        <h1 id="authTitle" class="auth-title">Начни путешествие <em>во вкус.</em></h1>
+                        <p id="authSubtitle" class="auth-subtitle">Войдите в личный кабинет, чтобы видеть заказы,
+                            избранные вкусы и быстро оформлять новые покупки.</p>
+
+                        <form id="authForm" class="auth-form" novalidate>
+                            <input id="authMode" type="hidden" name="mode" value="login" />
+
+                            <div id="authNameField" class="auth-field" hidden>
+                                <label for="authName">ФИО</label>
+                                <input id="authName" name="fio" type="text" autocomplete="name"
+                                    placeholder="Например, Сергей Петров" />
+                            </div>
+
+                            <div class="auth-field">
+                                <label for="authEmail">E-mail или логин</label>
+                                <input id="authEmail" name="email" type="text" autocomplete="username"
+                                    placeholder="ваш@email.ru" required />
+                            </div>
+
+                            <div class="auth-field auth-password">
+                                <label for="authPassword">Пароль</label>
+                                <input id="authPassword" name="password" type="password" autocomplete="current-password"
+                                    placeholder="Минимум 6 символов" required />
+                                <button id="passwordToggle" type="button" aria-label="Показать пароль">◌</button>
+                            </div>
+
+                            <button id="authSubmit" class="auth-submit" type="submit">Войти</button>
+                            <div id="authMessage" class="auth-error" role="alert"></div>
+                        </form>
+
+                        <p id="authQuestion" class="auth-note">Нет аккаунта? <button type="button"
+                                data-switch="register">Зарегистрироваться</button></p>
+                    </section>
+
+                    <aside class="auth-visual" aria-label="Карамелия">
+                        <img src="assets/about/about-bakery.png" alt="Подарочная коробка с выпечкой Карамелии" />
+                        <div class="auth-visual__caption">
+                            <h2>Вкус начинается<br /><em>с момента.</em></h2>
+                            <span>Кондитерская «Карамелия»</span>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- =====================================================
+           ЗАРЕГИСТРИРОВАННЫЙ ПОЛЬЗОВАТЕЛЬ
+           ===================================================== -->
+                <div id="customerView" class="account-dashboard" hidden>
+                    <aside class="dashboard-sidebar" aria-label="Разделы кабинета">
+                        <nav class="dashboard-nav">
+                            <button type="button" class="is-active" data-panel="personal">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="3.2" />
+                                    <path d="M5 20c.8-3.1 3.3-5 7-5s6.2 1.9 7 5" />
+                                </svg>
+                                <span>Данные</span>
+                            </button>
+                            <button type="button" data-panel="orders">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 7h16v13H4z" />
+                                    <path d="M8 7V4h8v3" />
+                                </svg>
+                                <span>Заказы</span>
+                            </button>
+                            <button type="button" data-panel="favorites">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 20S4 15.4 4 9.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.4C20 15.4 12 20 12 20Z" />
+                                </svg>
+                                <span>Избранное</span>
+                            </button>
+                            <button type="button" data-panel="reviews">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="m12 4 2.2 4.6 5.1.7-3.7 3.6.9 5.1-4.5-2.4-4.5 2.4.9-5.1-3.7-3.6 5.1-.7z" />
+                                </svg>
+                                <span>Отзывы</span>
+                            </button>
+                            <button type="button" data-panel="settings">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1" />
+                                </svg>
+                                <span>Настройки</span>
+                            </button>
+                            <button type="button" data-action="logout">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M10 5H5v14h5" />
+                                    <path d="M14 8l4 4-4 4M18 12H9" />
+                                </svg>
+                                <span>Выйти</span>
+                            </button>
+                        </nav>
+                    </aside>
+
+                    <aside class="dashboard-profile">
+                        <div class="avatar-wrap">
+                            <img id="customerAvatar" class="avatar" src="assets/hero/hero-icon-cakes.png"
+                                alt="Аватар пользователя" />
+                            <input id="avatarInput" type="file" accept="image/*" hidden />
+                            <button type="button" class="avatar-edit" data-action="avatar">Изменить фото</button>
+                        </div>
+                        <h2 id="customerName" class="profile-name">Клиент</h2>
+                        <p id="customerRole" class="profile-role">Клиент</p>
+
+                        <div class="profile-links">
+                            <button class="is-active" type="button" data-panel="personal">Личная информация</button>
+                            <button type="button" data-panel="settings">Логин и пароль</button>
+                            <button class="logout-btn" type="button" data-action="logout">Выход</button>
+                        </div>
+                    </aside>
+
+                    <section class="dashboard-main">
+                        <div class="dashboard-head">
+                            <div>
+                                <p class="dashboard-eyebrow">Кабинет клиента</p>
+                                <h1 id="customerPanelTitle" class="dashboard-title">Личная информация</h1>
+                            </div>
+                            <p class="dashboard-head-note">Сохраняйте свои данные один раз, чтобы оформление заказов и
+                                доставка занимали меньше времени.</p>
+                        </div>
+
+                        <section id="panel-personal" class="view-panel is-active">
+                            <form id="infoForm" class="info-form">
+                                <div class="info-grid">
+                                    <div class="info-field"><label for="infoName">ФИО</label><input id="infoName"
+                                            name="fio" type="text" required /></div>
+                                    <div class="info-field"><label for="infoEmail">E-mail</label><input id="infoEmail"
+                                            name="email" type="email" readonly /></div>
+                                    <div class="info-field"><label for="infoPhone">Телефон</label><input id="infoPhone"
+                                            name="phone" type="tel" placeholder="+7 900 000 00 00" /></div>
+                                    <div class="info-field"><label for="infoBirth">Дата рождения</label><input
+                                            id="infoBirth" name="birthDate" type="date" /></div>
+                                    <div class="info-field wide"><label for="infoAddress">Адрес</label><input
+                                            id="infoAddress" name="address" type="text"
+                                            placeholder="Улица, дом, квартира" /></div>
+                                    <div class="info-field"><label for="infoCity">Город</label><input id="infoCity"
+                                            name="city" type="text" placeholder="Москва" /></div>
+                                    <div class="info-field"><label for="infoPreferences">Любимые вкусы</label><input
+                                            id="infoPreferences" name="preferences" type="text"
+                                            placeholder="Шоколад, фисташка, ягоды" /></div>
+                                </div>
+                                <div class="info-actions">
+                                    <button id="infoReset" class="btn-outline" type="button">Сбросить изменения</button>
+                                    <button class="btn-caramel" type="submit">Сохранить изменения</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <section id="panel-orders" class="view-panel">
+                            <div class="stat-grid">
+                                <div class="stat-card"><strong id="statOrders">0</strong><span>заказов</span></div>
+                                <div class="stat-card"><strong id="statPaid">0</strong><span>оплачено</span></div>
+                                <div class="stat-card"><strong id="statFavorites">0</strong><span>в избранном</span>
+                                </div>
+                                <div class="stat-card"><strong id="statReviews">0</strong><span>отзывов</span></div>
+                            </div>
+                            <div id="ordersList" class="order-list"></div>
+                        </section>
+
+                        <section id="panel-favorites" class="view-panel">
+                            <div id="favoritesGrid" class="favorite-grid"></div>
+                        </section>
+
+                        <section id="panel-reviews" class="view-panel">
+                            <div id="reviewsList"></div>
+                        </section>
+
+                        <section id="panel-settings" class="view-panel">
+                            <div class="settings-grid">
+                                <article class="settings-card">
+                                    <h3>Логин</h3>
+                                    <p>Ваш e-mail используется для входа в личный кабинет и привязан к аккаунту.</p>
+                                    <strong id="settingsEmail">—</strong>
+                                </article>
+                                <article class="settings-card">
+                                    <h3>Пароль</h3>
+                                    <p>Для учебного демонстрационного проекта пароль хранится локально в браузере. В
+                                        полноценном сервисе он должен храниться только в защищённом backend.</p><button
+                                        class="btn-outline" type="button" id="settingsNotice">Изменить пароль</button>
+                                </article>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+                <!-- =====================================================
+           АДМИНИСТРАТОР
+           ===================================================== -->
+                <div id="adminView" class="account-dashboard admin-page" hidden>
+                    <aside class="dashboard-sidebar" aria-label="Разделы панели администратора">
+                        <nav class="dashboard-nav">
+                            <button type="button" class="is-active"
+                                data-admin-tab="products"><span>Товары</span></button>
+                            <button type="button" data-admin-tab="orders"><span>Заказы</span></button>
+                            <button type="button" data-admin-tab="reviews"><span>Отзывы</span></button>
+                            <button type="button" data-admin-tab="users"><span>Пользователи</span></button>
+                            <button type="button" data-action="logout"><span>Выйти</span></button>
+                        </nav>
+                    </aside>
+
+                    <aside class="dashboard-profile">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="assets/branding/DSC09779.JPG" alt="Кабинет администратора" />
+                        </div>
+                        <h2 id="adminName" class="profile-name">Администратор</h2>
+                        <p class="profile-role">Администратор Карамелии</p>
+                        <span class="admin-badge">Доступ администратора</span>
+                    </aside>
+
+                    <section class="dashboard-main">
+                        <div class="dashboard-head">
+                            <div>
+                                <p class="dashboard-eyebrow">Панель управления</p>
+                                <h1 class="dashboard-title">Карамелия <em>внутри.</em></h1>
+                            </div>
+                            <p class="dashboard-head-note">Здесь можно управлять каталогом, заказами, отзывами и
+                                пользователями демонстрационного сайта.</p>
+                        </div>
+
+                        <div class="admin-tabs" role="tablist" aria-label="Разделы администратора">
+                            <button class="is-active" type="button" data-admin-tab="products">Товары</button>
+                            <button type="button" data-admin-tab="orders">Заказы</button>
+                            <button type="button" data-admin-tab="reviews">Отзывы</button>
+                            <button type="button" data-admin-tab="users">Пользователи</button>
+                        </div>
+
+                        <section id="admin-panel-products" class="admin-tab-panel" data-admin-panel="products">
+                            <div class="admin-toolbar" style="margin:22px 0 16px">
+                                <p>Сейчас в каталоге: <strong id="adminProductCount">0</strong> позиций.</p>
+                                <button id="openAddProduct" class="btn-dark" type="button">Добавить позицию</button>
+                            </div>
+                            <div id="adminProductsGrid" class="admin-products"></div>
+                        </section>
+
+                        <section id="admin-panel-orders" class="admin-tab-panel" data-admin-panel="orders" hidden>
+                            <div class="admin-table-wrap" style="margin-top:22px">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Пользователь</th>
+                                            <th>Товар</th>
+                                            <th>Сумма</th>
+                                            <th>Дата</th>
+                                            <th>Статус</th>
+                                            <th>Оплата</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adminOrdersBody"></tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="admin-panel-reviews" class="admin-tab-panel" data-admin-panel="reviews" hidden>
+                            <div class="admin-table-wrap" style="margin-top:22px">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Пользователь</th>
+                                            <th>Товар</th>
+                                            <th>Отзыв</th>
+                                            <th>Ответ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adminReviewsBody"></tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="admin-panel-users" class="admin-tab-panel" data-admin-panel="users" hidden>
+                            <div class="admin-table-wrap" style="margin-top:22px">
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ФИО</th>
+                                            <th>E-mail</th>
+                                            <th>Роль</th>
+                                            <th>Телефон</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adminUsersBody"></tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Модальное окно добавления товара -->
+            <div id="productModal" class="account-modal" hidden role="dialog" aria-modal="true"
+                aria-labelledby="productModalTitle">
+                <div class="account-modal__panel">
+                    <div class="account-modal__top">
+                        <h2 id="productModalTitle" class="account-modal__title">Новая позиция</h2><button
+                            class="account-modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+                    </div>
+                    <form id="productForm" class="modal-form">
+                        <div class="modal-grid">
+                            <div class="modal-field"><label for="productCategory">Категория</label><select
+                                    id="productCategory" name="category" required>
+                                    <option value="Торты">Торты</option>
+                                    <option value="Пирожные">Пирожные</option>
+                                    <option value="Выпечка">Выпечка</option>
+                                    <option value="Лимитированные вкусности">Лимитированные вкусности</option>
+                                </select></div>
+                            <div class="modal-field"><label for="productPrice">Цена, ₽</label><input id="productPrice"
+                                    name="price" type="number" min="1" step="1" required /></div>
+                            <div class="modal-field wide"><label for="productName">Название</label><input
+                                    id="productName" name="name" type="text" required /></div>
+                            <div class="modal-field wide"><label for="productDescription">Описание</label><textarea
+                                    id="productDescription" name="description" required></textarea></div>
+                            <div class="modal-field wide">
+                                <label>Изображение</label>
+                                <label class="file-upload" for="productImage">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 16V4m0 0-4 4m4-4 4 4" />
+                                        <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                                    </svg>
+                                    <span class="file-upload__text" data-file-name>Выбрать файл</span>
+                                    <span class="file-upload__hint">JPG, PNG до 5 МБ</span>
+                                    <input id="productImage" name="image" type="file" accept="image/*" />
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-actions"><button class="btn-outline" type="button"
+                                data-close-modal>Отмена</button><button class="btn-dark" type="submit">Добавить
+                                товар</button></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Подтверждение удаления -->
+            <div id="deleteModal" class="account-modal" hidden role="dialog" aria-modal="true"
+                aria-labelledby="deleteModalTitle">
+                <div class="account-modal__panel">
+                    <div class="account-modal__top">
+                        <h2 id="deleteModalTitle" class="account-modal__title">Удалить позицию?</h2><button
+                            class="account-modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+                    </div>
+                    <p style="font-size:11px;line-height:1.65;margin:0 0 20px;color:rgba(48,23,18,.64)">Товар будет
+                        удалён из локального каталога демонстрационного проекта. Действие нельзя отменить без повторного
+                        добавления позиции.</p>
+                    <form id="deleteForm"><input id="deleteProductId" type="hidden">
+                        <div class="modal-actions"><button class="btn-outline" type="button"
+                                data-close-modal>Оставить</button><button class="btn-dark" type="submit">Удалить
+                                товар</button></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Ответ на отзыв -->
+            <div id="reviewModal" class="account-modal" hidden role="dialog" aria-modal="true"
+                aria-labelledby="reviewModalTitle">
+                <div class="account-modal__panel">
+                    <div class="account-modal__top">
+                        <h2 id="reviewModalTitle" class="account-modal__title">Ответ Карамелии</h2><button
+                            class="account-modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+                    </div>
+                    <form id="reviewForm" class="modal-form"><input id="replyReviewId" type="hidden">
+                        <div class="modal-field"><label for="replyText">Текст ответа</label><textarea id="replyText"
+                                required placeholder="Напишите ответ пользователю"></textarea></div>
+                        <div class="modal-actions"><button class="btn-outline" type="button"
+                                data-close-modal>Отмена</button><button class="btn-dark" type="submit">Сохранить
+                                ответ</button></div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="passwordModal" class="account-modal" hidden role="dialog" aria-modal="true"
+                aria-labelledby="passwordModalTitle">
+                <div class="account-modal__panel">
+                    <div class="account-modal__top">
+                        <h2 id="passwordModalTitle" class="account-modal__title">Новый пароль</h2><button
+                            class="account-modal__close" type="button" data-close-modal aria-label="Закрыть">×</button>
+                    </div>
+                    <form id="passwordForm" class="modal-form">
+                        <div class="modal-field"><label for="currentPassword">Текущий пароль</label><input
+                                id="currentPassword" name="current" type="password" required /></div>
+                        <div class="modal-field"><label for="newPassword">Новый пароль</label><input id="newPassword"
+                                name="next" type="password" minlength="6" required /></div>
+                        <div class="modal-field"><label for="newPasswordRepeat">Повторите новый пароль</label><input
+                                id="newPasswordRepeat" name="repeat" type="password" minlength="6" required /></div>
+                        <div id="passwordMessage" class="auth-error" role="alert"></div>
+                        <div class="modal-actions"><button class="btn-outline" type="button"
+                                data-close-modal>Отмена</button><button class="btn-dark" type="submit">Сохранить
+                                пароль</button></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Оставить отзыв -->
+            <div id="writeReviewModal" class="account-modal" hidden role="dialog" aria-modal="true"
+                aria-labelledby="writeReviewTitle">
+                <div class="account-modal__panel">
+                    <div class="account-modal__top">
+                        <h2 id="writeReviewTitle" class="account-modal__title">Ваш отзыв</h2>
+                        <button class="account-modal__close" type="button" data-close-modal
+                            aria-label="Закрыть">×</button>
+                    </div>
+                    <form id="writeReviewForm" class="modal-form">
+                        <input id="reviewOrderId" type="hidden" />
+                        <p class="write-review-product" id="writeReviewProduct">Заказ</p>
+
+                        <div class="modal-field">
+                            <label>Оценка</label>
+                            <div class="rating-input" id="ratingInput" role="radiogroup" aria-label="Оценка">
+                                <button type="button" data-rating="1" aria-label="1 из 5">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 10l6.1-.9L12 3.5z" />
+                                    </svg>
+                                </button>
+                                <button type="button" data-rating="2" aria-label="2 из 5">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 10l6.1-.9L12 3.5z" />
+                                    </svg>
+                                </button>
+                                <button type="button" data-rating="3" aria-label="3 из 5">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 10l6.1-.9L12 3.5z" />
+                                    </svg>
+                                </button>
+                                <button type="button" data-rating="4" aria-label="4 из 5">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 10l6.1-.9L12 3.5z" />
+                                    </svg>
+                                </button>
+                                <button type="button" data-rating="5" aria-label="5 из 5">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3.5l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 10l6.1-.9L12 3.5z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <input id="reviewRating" type="hidden" name="rating" value="5" />
+                        </div>
+
+                        <div class="modal-field">
+                            <label for="reviewText">Отзыв</label>
+                            <textarea id="reviewText" name="text" required minlength="5"
+                                placeholder="Расскажите, как вам десерт: вкус, оформление, впечатление"></textarea>
+                        </div>
+
+                        <div id="writeReviewMessage" class="auth-error" role="alert"></div>
+
+                        <div class="modal-actions">
+                            <button class="btn-outline" type="button" data-close-modal>Отмена</button>
+                            <button class="btn-dark" type="submit">Отправить отзыв</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+
+            <!-- FOOTER -->
+            <footer class="site-footer" id="footer">
+                <div class="footer-inner footer-inner--five">
+                    <section class="footer-column footer-about">
+                        <h2 class="footer-title">ВКУС И КАЧЕСТВО</h2>
+                        <p>Карамелия — кондитерская, где классические рецепты встречаются с современной эстетикой. Мы
+                            создаём десерты
+                            вручную и уделяем внимание каждой детали — от первого вкуса до последнего штриха декора.</p>
+                    </section>
+
+                    <nav class="footer-column" aria-label="О нас">
+                        <h2 class="footer-title">О НАС</h2>
+                        <a href="about.html">История Карамелии</a>
+                        <a href="about.html#team">Наша команда</a>
+                        <a href="about.html#approach">Наш подход</a>
+                        <a href="about.html#reviews">Отзывы</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Помощь">
+                        <h2 class="footer-title">ПОМОЩЬ</h2>
+                        <a href="#faq">Доставка и оплата</a>
+                        <a href="#faq">Как оформить заказ</a>
+                        <a href="#faq">Частые вопросы</a>
+                        <a href="#faq">Условия заказа</a>
+                        <a href="#footer">Политика конфиденциальности</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Контакты">
+                        <h2 class="footer-title">КОНТАКТЫ</h2>
+                        <a href="tel:+79615495614">+7 961 549 56 14</a>
+                        <a href="mailto:hello@karameliya.ru">hello@karameliya.ru</a>
+                        <a href="#footer">Instagram</a>
+                        <a href="#footer">TikTok</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Продукция">
+                        <h2 class="footer-title">ПРОДУКЦИЯ</h2>
+                        <a href="catalog.html#cakes">Торты</a>
+                        <a href="catalog.html#desserts">Десерты</a>
+                        <a href="catalog.html#bakery">Выпечка</a>
+                        <a href="catalog.html#gift">Подарочные наборы</a>
+                    </nav>
+                </div>
+
+                <div class="footer-wordmark" aria-label="Karamelia">
+
+                    <div class="footer-wordmark-text">KAR<span>AME</span>LIA</div>
+                </div>
+
+                <div class="footer-meta">
+                    <div class="footer-meta-side footer-meta-left">© 2026 Karamelia. Все права защищены.</div>
+                    <div class="footer-partners" aria-label="Партнёры">
+                        <span>LUMIÈRE</span><span>MOKKA</span><span>VANILLE</span><span>MELLOW</span><span>NOIRÉ</span>
+                    </div>
+                    <div class="footer-meta-side footer-meta-right">Сделано с любовью к деталям и хорошему вкусу.</div>
+                </div>
+            </footer>
+    </main>
+
+    <script src="js/app.js"></script> <!-- сначала app -->
+    <script src="js/script.js"></script>
+    <script src="js/account.js"></script>
+</body>
+
+</html>

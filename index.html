@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Карамелия — авторские торты и десерты ручной работы." />
+  <title>Карамелия — авторская кондитерская</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/branding/favicon.ico">
+</head>
+<style>
+
+</style>
+
+<body>
+  <main>
+    <div class="hero" id="top">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Карамелия — на главную">
+          <span class="brand-fallback">КАРАМЕЛИЯ</span>
+          <img src="assets/branding/logo.png" alt="Карамелия"
+            onerror="this.style.display='none'; this.previousElementSibling.style.display='inline';" />
+        </a>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a class="nav-link active" href="index.html">ГЛАВНАЯ</a>
+          <a class="nav-link" href="about.html">О НАС</a>
+          <a class="nav-link" href="catalog.html">НАШИ ВКУСНОСТИ</a>
+          <a class="nav-link" href="#footer">КОНТАКТЫ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="icon-btn" href="basket.html" aria-label="Корзина" title="Корзина">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 7h12l-1 12H7L6 7Zm3 0a3 3 0 0 1 6 0" />
+              <path d="M4 7h16" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="account.html" aria-label="Профиль" title="Профиль">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5" />
+            </svg>
+          </a>
+        </div>
+
+        <a class="phone-link" href="tel:+79615495614">+7 961 549 56 14</a>
+
+        <button class="mobile-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="index.html">ГЛАВНАЯ</a>
+        <a href="about.html">О НАС</a>
+        <a href="catalog.html">НАШИ ВКУСНОСТИ</a>
+        <a href="#footer">КОНТАКТЫ</a>
+        <a href="tel:+79615495614">+7 961 549 56 14</a>
+      </div>
+
+      <section class="hero-main" aria-label="Главный экран">
+        <div class="title-lockup" aria-label="KAR ame LIA">
+          <div class="title-side title-left">KAR</div>
+          <div class="dash dash-left" aria-hidden="true"></div>
+          <div class="title-center">
+            <div class="ame-word">ame</div>
+          </div>
+          <div class="dash dash-right" aria-hidden="true"></div>
+          <div class="title-side title-right">LIA.</div>
+          <span class="accent-mark" aria-hidden="true"></span>
+        </div>
+
+        <div class="cake-wrap">
+          <div class="cake-glow"></div>
+          <div class="cake-placeholder" aria-hidden="true">
+            <span>hero-cake.png</span>
+          </div>
+          <img class="hero-cake" src="assets/hero/hero-cake.png" alt="Фирменный авторский торт Карамелии"
+            onerror="this.style.display='none'; this.previousElementSibling.style.display='flex';" />
+
+          <div class="cake-glass-card">
+            <span class="glass-kicker">Ручная работа</span>
+            <p>Авторские украшения и тонкие детали, созданные вручную с вниманием к каждой линии.</p>
+          </div>
+        </div>
+
+        <div class="hero-left-column">
+          <div class="copy-block reveal reveal-delay-1">
+            <p>Мы создаём авторские торты и десерты, в которых вкус становится частью особенного момента. Каждая работа
+              собирается вручную — от нежной начинки до последнего декоративного штриха.</p>
+            <p>Сочетаем классические рецептуры, современные вкусы и эстетику ручной работы, чтобы каждый десерт оставлял
+              после себя тёплое впечатление.</p>
+          </div>
+
+          <a class="primary-btn reveal reveal-delay-2" href="catalog.html">Смотреть вкусности</a>
+
+          <div class="socials reveal reveal-delay-3" aria-label="Мы в социальных сетях">
+            <a href="#" aria-label="Facebook" class="social-icon"><img src="assets/icons/facebook 1.png"></a>
+            <a href="#" aria-label="Instagram" class="social-icon"><img src="assets/icons/instagram 1.png"></a>
+            <a href="#" aria-label="Pinterest" class="social-icon"><img src="assets/icons/pinterest 1.png"></a>
+            <a href="#" aria-label="TikTok" class="social-icon"><img src="assets/icons/tiktok 1.png"></a>
+          </div>
+        </div>
+
+        <div class="hero-right-column">
+          <section class="taste-panel reveal reveal-delay-1" aria-label="Выберите вкус">
+            <h2>Выбери свой вкус</h2>
+            <div class="taste-grid">
+              <button class="taste-card" type="button" data-taste="Ваниль">
+                <div class="taste-image taste-vanilla"><span><img src="assets/decorations/vanila.png"></span></div>
+                <span>Ваниль</span>
+              </button>
+              <button class="taste-card" type="button" data-taste="Шоколад">
+                <div class="taste-image taste-chocolate"><span><img src="assets/decorations/chocolate.png"></span></div>
+                <span>Шоколад</span>
+              </button>
+              <button class="taste-card" type="button" data-taste="Клубника">
+                <div class="taste-image taste-strawberry"><span><img src="assets/decorations/berry.png"></span></div>
+                <span>Клубника</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="chef-card reveal reveal-delay-2">
+            <div class="chef-copy">
+              <h2>Связаться<br />с кондитером</h2>
+              <p>Расскажите нам о вашем празднике, любимых вкусах и желаемом дизайне. Вместе создадим десерт, который
+                идеально подойдёт для вашего события.</p>
+              <a href="#footer" class="secondary-btn">Оставить заявку</a>
+            </div>
+            <div class="chef-placeholder" aria-hidden="true">hero-chef.png</div>
+            <img class="hero-chef" src="assets/hero/chef.png" alt="Кондитер Карамелии"
+              onerror="this.style.display='none'; this.previousElementSibling.style.display='block';" />
+          </section>
+        </div>
+      </section>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <span>листать</span>
+      </div>
+    </div>
+    <!-- ========== О НАС ========== -->
+    <section class="about-preview" id="about" aria-labelledby="about-title">
+      <div class="cream-drip" aria-hidden="true"></div>
+      <div class="oval-frame" aria-hidden="true"></div>
+      <div class="about-inner">
+        <p class="section-kicker">Авторская кондитерская</p>
+        <h2 id="about-title">Кондитерская <span>Карамелия</span></h2>
+        <p class="about-lead">Мы создаём десерты, которые хочется не просто попробовать, а запомнить. В Карамелии
+          классические рецепты встречаются с современными идеями, а каждый торт создаётся вручную — от первого кремового
+          слоя до последнего декоративного штриха.</p>
+        <p class="about-small">Для нас важны не только вкус и внешний вид, но и эмоция, которую десерт оставляет после
+          первого кусочка.</p>
+        <a class="pill-button pill-button--light" href="about.html">Узнать больше о Карамелии</a>
+      </div>
+    </section>
+
+    <!-- ========== ГАЛЕРЕЯ ========== -->
+    <section class="dessert-gallery" aria-labelledby="gallery-title">
+      <div class="gallery-cream" aria-hidden="true">
+        <span class="gallery-drip gallery-drip--a"></span>
+        <span class="gallery-drip gallery-drip--b"></span>
+        <span class="gallery-drip gallery-drip--c"></span>
+      </div>
+      <div class="gallery-header">
+        <p class="section-kicker section-kicker--dark">Вкусные истории</p>
+        <h2 id="gallery-title">15 оттенков сладости.</h2>
+      </div>
+      <div class="gallery-shell" data-carousel>
+        <div class="gallery-track" data-track>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-01.jpeg">01</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-02.jpeg">02</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-03.jpeg">03</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-04.jpg">04</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-05.jpeg">05</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-06.jpg">06</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-07.jpg">07</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-08.jpg">08</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-09.jpg">09</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-10.jpg">10</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-11.jpg">11</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-12.jpeg">12</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-13.jpg">13</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-14.jpg">14</div>
+          </article>
+          <article class="dessert-card">
+            <div class="image-placeholder" data-src="assets/gallery/gallery-15.jpg">15</div>
+          </article>
+        </div>
+      </div>
+      <div class="gallery-controls">
+        <button type="button" data-prev aria-label="Предыдущие десерты">←</button>
+        <button type="button" data-next aria-label="Следующие десерты">→</button>
+      </div>
+
+    </section>
+    <!-- ========== CHEFS ========== -->
+    <section class="chefs-section" id="chefs" aria-labelledby="chefs-title">
+      <div class="chefs-top-band" aria-hidden="true"></div>
+      <div class="chefs-decorative-dot dot-a" aria-hidden="true"></div>
+      <div class="chefs-decorative-dot dot-b" aria-hidden="true"></div>
+      <div class="chefs-decorative-dot dot-c" aria-hidden="true"></div>
+      <div class="cream-drip" aria-hidden="true"></div>
+      <div class="chefs-slider" data-chef-slider>
+        <div class="chef-slide is-active" data-chef-slide="0">
+          <div class="chef-visual">
+            <div class="circle circle-main"></div>
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+            <div class="circle circle-four"></div>
+            <div class="chef-media-placeholder" aria-hidden="true">chef-01.png</div>
+            <img class="chef-portrait" src="assets/chefs/chef-01.png" alt="Александр Беляев"
+              onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+          </div>
+          <div class="chef-info">
+            <div class="micro-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h2 id="chefs-title">Наши<br />бисквитные феи</h2>
+            <p>Александр отвечает за основу наших десертов — воздушные бисквиты, нежные кремы и гармоничные сочетания
+              вкусов. Он внимательно относится к каждой детали и превращает классические рецепты в современные авторские
+              десерты.</p>
+            <div class="chef-name">Александр Беляев</div>
+            <div class="under-dots" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="chef-slide" data-chef-slide="1">
+          <div class="chef-visual">
+            <div class="circle circle-main"></div>
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+            <div class="circle circle-four"></div>
+            <div class="chef-media-placeholder" aria-hidden="true">chef-02.png</div>
+            <img class="chef-portrait" src="assets/chefs/chef-02.png" alt="Максим Орлов"
+              onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+          </div>
+          <div class="chef-info">
+            <div class="micro-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h2>Наши<br />бисквитные феи</h2>
+            <p>Максим любит работать с шоколадом, карамелью и ореховыми нотами. Его десерты отличаются насыщенным
+              вкусом, выразительной текстурой и аккуратной ручной отделкой.</p>
+            <div class="chef-name">Максим Орлов</div>
+            <div class="under-dots" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="chef-slide" data-chef-slide="2">
+          <div class="chef-visual">
+            <div class="circle circle-main"></div>
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+            <div class="circle circle-four"></div>
+            <div class="chef-media-placeholder" aria-hidden="true">chef-03.png</div>
+            <img class="chef-portrait" src="assets/chefs/chef-03.png" alt="Дмитрий Воронцов"
+              onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+          </div>
+          <div class="chef-info">
+            <div class="micro-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h2>Наши<br />бисквитные феи</h2>
+            <p>Дмитрий специализируется на праздничных тортах и сложном декоре. Для него каждый заказ — это небольшая
+              история, которую можно рассказать через форму, цвет и вкус.</p>
+            <div class="chef-name">Дмитрий Воронцов</div>
+            <div class="under-dots" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chef-slider-controls" role="tablist" aria-label="Слайды сотрудников">
+        <button class="chef-dot is-active" type="button" data-chef-to="0" aria-label="Слайд 1"
+          aria-selected="true">1</button>
+        <button class="chef-dot" type="button" data-chef-to="1" aria-label="Слайд 2" aria-selected="false">2</button>
+        <button class="chef-dot" type="button" data-chef-to="2" aria-label="Слайд 3" aria-selected="false">3</button>
+      </div>
+      <div class="chef-half-circle" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="products-section" id="products" aria-labelledby="products-title">
+      <div class="products-overlay" aria-hidden="true"></div>
+      <div class="products-layout">
+        <div class="products-heading">
+          <p>Рецепты, созданные с любовью к деталям</p>
+          <h2 id="products-title">Наши вкусности</h2>
+          <div class="product-controls" aria-label="Переключение товаров">
+            <button class="slider-arrow" type="button" data-product-dir="prev" aria-label="Предыдущие товары">←</button>
+            <button class="slider-arrow" type="button" data-product-dir="next" aria-label="Следующие товары">→</button>
+          </div>
+        </div>
+
+        <div class="products-viewport" data-products-viewport>
+          <div class="products-track" data-products-track>
+            <article class="product-card">
+              <div class="product-media"><span>product-01.png</span><img src="assets/products/pastries/pastry-03.jpeg"
+                  alt="Тайский" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" /></div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Тайский</h3><span class="product-price">400₽</span>
+                </div>
+                <p>Шоколадный бисквит, нежный крем и карамельно-ореховая начинка.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><span>product-02.png</span><img src="assets/products/limited/limited-01.jpeg"
+                  alt="Простите" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" /></div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>ПроститНО</h3><span class="product-price">400₽</span>
+                </div>
+                <p>Воздушный десерт с ванильным кремом и лёгкой ягодной нотой.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><span>product-03.png</span><img src="assets/products/bakery/bakery-02.jpeg"
+                  alt="Тихоехам" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" /></div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Тихоехамство</h3><span class="product-price">400₽</span>
+                </div>
+                <p>Нежная выпечка с ароматной начинкой и хрустящими орехами.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><span>product-04.png</span><img src="assets/products/limited/limited-04.jpg"
+                  alt="Карамельный поцелуй" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+              </div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Сладкая роза</h3><span class="product-price">450₽</span>
+                </div>
+                <p>Сливочный крем, мягкая карамель и тонкая нотка морской соли.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><span>product-05.png</span><img src="assets/products/cakes/cake-04.jpg"
+                  alt="Шоколадное облако" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" /></div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Шоколадное облако</h3><span class="product-price">450₽</span>
+                </div>
+                <p>Насыщенный шоколадный бисквит, крем и воздушный мусс.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+            <article class="product-card">
+              <div class="product-media"><span>product-06.png</span><img src="assets/products/pastries/pastry-01.jpg"
+                  alt="Клубничный вечер" onerror="this.hidden=true; this.previousElementSibling.hidden=false;" /></div>
+              <div class="product-body">
+                <div class="product-title-row">
+                  <h3>Клубничный вечер</h3><span class="product-price">500₽</span>
+                </div>
+                <p>Нежный ванильный бисквит, клубничная начинка и сливочный крем.</p><a href="catalog.html"
+                  class="product-button">Заказать вкусняшку</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 4: FAQ -->
+    <section class="faq-section section-shell" id="faq" aria-labelledby="faq-title">
+      <div class="faq-side-band faq-side-band--left" aria-hidden="true"></div>
+      <div class="faq-side-band faq-side-band--right" aria-hidden="true"></div>
+      <div class="faq-layout">
+        <div class="faq-decoration faq-decoration--left" aria-hidden="true">
+          <div class="faq-image-placeholder">cake-faq-left.png</div>
+          <img src="assets/decorations/cake-faq-left.png" alt="" loading="lazy"
+            onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+        </div>
+
+        <div class="faq-content">
+          <div class="faq-page is-active" data-faq-page="0">
+            <div class="faq-micro-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h2 id="faq-title">FAQs</h2>
+            <p class="faq-intro">Ответы на самые частые вопросы о заказе, доставке и наших десертах. С радостью поможем
+              вам с любым вопросом!</p>
+            <div class="faq-list">
+              <article class="faq-item is-open">
+                <button class="faq-question" type="button" aria-expanded="true">
+                  <span>Как оформить заказ?</span>
+                  <span class="faq-circle faq-circle--filled" aria-hidden="true">→</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Выберите понравившийся десерт в каталоге, добавьте его в корзину и оставьте контактные данные. Мы
+                    свяжемся с вами, чтобы подтвердить детали заказа и удобное время получения.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>За сколько дней нужно оформить заказ?</span>
+                  <span class="faq-circle" aria-hidden="true">→</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Для стандартных десертов рекомендуем оформить заказ заранее, а для индивидуальных тортов и сложного
+                    декора — обсудить детали с кондитером заблаговременно.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>Можно ли изменить состав десерта?</span>
+                  <span class="faq-circle" aria-hidden="true">→</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Да, многие начинки и элементы состава можно адаптировать. Возможность изменения зависит от
+                    выбранного десерта — детали согласовываются при подтверждении заказа.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>Есть ли доставка?</span>
+                  <span class="faq-circle" aria-hidden="true">→</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Доставка согласовывается индивидуально с учётом адреса, даты и размера заказа. Условия и стоимость
+                    можно уточнить у менеджера.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>Можно ли заказать индивидуальный дизайн?</span>
+                  <span class="faq-circle" aria-hidden="true">→</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Да. Мы можем обсудить цветовую гамму, оформление, надписи и декоративные элементы, чтобы десерт
+                    подходил именно вашему событию.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="faq-page" data-faq-page="1" hidden>
+            <div class="faq-micro-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h2>FAQs</h2>
+            <p class="faq-intro">Ещё немного полезной информации перед тем, как выбрать свою вкусняшку.</p>
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false"><span>Какие способы оплаты
+                    доступны?</span><span class="faq-circle">→</span></button>
+                <div class="faq-answer">
+                  <p>Способ оплаты согласовывается при подтверждении заказа. Мы заранее сообщим все доступные варианты.
+                  </p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false"><span>Можно ли заказать десерт к
+                    определённой дате?</span><span class="faq-circle">→</span></button>
+                <div class="faq-answer">
+                  <p>Да, при оформлении заказа укажите желаемую дату. Мы проверим загрузку производства и подтвердим
+                    возможность.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false"><span>Как хранить наши
+                    десерты?</span><span class="faq-circle">→</span></button>
+                <div class="faq-answer">
+                  <p>После получения храните десерт в холодильнике и следуйте рекомендациям, которые мы даём для
+                    конкретного вида начинки и декора.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false"><span>Есть ли десерты без определённых
+                    ингредиентов?</span><span class="faq-circle">→</span></button>
+                <div class="faq-answer">
+                  <p>Некоторые рецептуры можно адаптировать под ваши предпочтения. Перед заказом обязательно обсудите
+                    ограничения с кондитером.</p>
+                </div>
+              </article>
+              <article class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false"><span>Можно ли заказать большой
+                    праздничный торт?</span><span class="faq-circle">→</span></button>
+                <div class="faq-answer">
+                  <p>Да. Для больших тортов мы отдельно рассчитываем размер, вес, начинку и оформление под количество
+                    гостей и формат события.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="faq-pagination" role="tablist" aria-label="Страницы FAQ">
+            <button class="faq-page-btn is-active" type="button" data-faq-to="0" role="tab"
+              aria-selected="true">1</button>
+            <button class="faq-page-btn" type="button" data-faq-to="1" role="tab" aria-selected="false">2</button>
+          </div>
+        </div>
+
+        <div class="faq-decoration faq-decoration--right" aria-hidden="true">
+          <div class="faq-image-placeholder">cake-faq-left.png</div>
+          <img src="assets/decorations/cake-faq-right.png" alt="" loading="lazy"
+            onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: NEWSLETTER -->
+    <section class="newsletter-section section-shell" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="newsletter-layout">
+        <div class="newsletter-media" aria-hidden="true">
+          <div class="newsletter-image-placeholder">chocolate-cake.png</div>
+          <picture>
+            <source media="(max-width: 1200px)" srcset="assets/products/bakery/bakery-02.jpeg" />
+            <source media="(max-width: 900px)" srcset="assets/products/bakery/bakery-02.jpeg" />
+            <source media="(max-width: 640px)" srcset="assets/products/bakery/bakery-02.jpeg" />
+            <img src="assets/decorations/chocolate-cake.png" alt="" loading="lazy"
+              onerror="this.hidden=true; this.previousElementSibling.hidden=false;" />
+          </picture>
+        </div>
+        <div class="newsletter-content">
+          <p class="newsletter-kicker">ОТКРЫВАЙ НОВОЕ ВМЕСТЕ С НАМИ</p>
+          <h2 id="newsletter-title">УЗНАВАЙ О НОВИНКАХ<br />САМЫМ ПЕРВЫМ</h2>
+          <p class="newsletter-text">Получайте новости о новых вкусах, сезонных коллекциях и специальных предложениях
+            Карамелии раньше всех. Мы будем отправлять только самое интересное — без лишнего шума.</p>
+          <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/maeqnqqj" method="POST">
+            <label class="sr-only" for="newsletter-email">Ваш email</label>
+            <input id="newsletter-email" name="email" type="email" placeholder="Напишите свой email для рассылки..."
+              autocomplete="email" required />
+            <!-- Скрытые поля: тема письма + расшифровка -->
+            <input type="hidden" name="_subject" value="РАССЫЛКА КАРАМЕЛИИ" />
+            <input type="hidden" name="message" value="Хочет получать уведомления о новинках Карамелии." />
+            <button type="submit">ПОДПИСАТЬСЯ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+      <div class="footer-inner footer-inner--five">
+        <section class="footer-column footer-about">
+          <h2 class="footer-title">ВКУС И КАЧЕСТВО</h2>
+          <p>Карамелия — кондитерская, где классические рецепты встречаются с современной эстетикой. Мы создаём десерты
+            вручную и уделяем внимание каждой детали — от первого вкуса до последнего штриха декора.</p>
+        </section>
+
+        <nav class="footer-column" aria-label="О нас">
+          <h2 class="footer-title">О НАС</h2>
+          <a href="about.html">История Карамелии</a>
+          <a href="about.html#team">Наша команда</a>
+          <a href="about.html#approach">Наш подход</a>
+          <a href="about.html#reviews">Отзывы</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Помощь">
+          <h2 class="footer-title">ПОМОЩЬ</h2>
+          <a href="#faq">Доставка и оплата</a>
+          <a href="#faq">Как оформить заказ</a>
+          <a href="#faq">Частые вопросы</a>
+          <a href="#faq">Условия заказа</a>
+          <a href="#footer">Политика конфиденциальности</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Контакты">
+          <h2 class="footer-title">КОНТАКТЫ</h2>
+          <a href="tel:+79615495614">+7 961 549 56 14</a>
+          <a href="mailto:hello@karameliya.ru">hello@karameliya.ru</a>
+          <a href="#footer">Instagram</a>
+          <a href="#footer">TikTok</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Продукция">
+          <h2 class="footer-title">ПРОДУКЦИЯ</h2>
+          <a href="catalog.html#cakes">Торты</a>
+          <a href="catalog.html#desserts">Десерты</a>
+          <a href="catalog.html#bakery">Выпечка</a>
+          <a href="catalog.html#gift">Подарочные наборы</a>
+        </nav>
+      </div>
+
+      <div class="footer-wordmark" aria-label="Karamelia">
+
+        <div class="footer-wordmark-text">KAR<span>AME</span>LIA</div>
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-meta-side footer-meta-left">© 2026 Karamelia. Все права защищены.</div>
+        <div class="footer-partners" aria-label="Партнёры">
+          <span>LUMIÈRE</span><span>MOKKA</span><span>VANILLE</span><span>MELLOW</span><span>NOIRÉ</span>
+        </div>
+        <div class="footer-meta-side footer-meta-right">Сделано с любовью к деталям и хорошему вкусу.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
