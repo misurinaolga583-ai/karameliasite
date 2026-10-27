@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Корзина — Карамелия</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/basket.css" />
+  <link rel="icon" type="image/x-icon" href="assets/branding/favicon.ico">
+</head>
+<body>
+  <main class="inner-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Карамелия — на главную"><span class="brand-fallback">КАРАМЕЛИЯ</span><img src="assets/branding/logo.png" alt="Карамелия" onerror="this.style.display='none'; this.previousElementSibling.style.display='inline';" /></a>
+      <nav class="main-nav" aria-label="Основная навигация"><a class="nav-link" href="index.html">ГЛАВНАЯ</a><a class="nav-link" href="about.html">О НАС</a><a class="nav-link" href="catalog.html">НАШИ ВКУСНОСТИ</a><a class="nav-link" href="basket.html#footer">КОНТАКТЫ</a></nav>
+      <div class="header-actions"><a class="icon-btn active" href="basket.html" aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M6 7h12l-1 12H7L6 7Zm3 0a3 3 0 0 1 6 0"/><path d="M4 7h16"/></svg><span class="header-count" id="headerCartCount">0</span></a><a class="icon-btn" href="account.html" aria-label="Профиль"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5"/></svg></a></div>
+      <a class="phone-link" href="tel:+79615495614">+7 961 549 56 14</a>
+      <button class="mobile-toggle" type="button" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
+    </header>
+
+    <nav class="mobile-menu" aria-hidden="true"><a href="index.html">ГЛАВНАЯ</a><a href="about.html">О НАС</a><a href="catalog.html">НАШИ ВКУСНОСТИ</a><a href="basket.html">КОРЗИНА</a><a href="account.html">ЛИЧНЫЙ КАБИНЕТ</a></nav>
+
+    <section class="simple-section basket-section">
+      <div class="basket-head"><span class="eyebrow">Ваш выбор</span><h1 class="basket-title">Моя <em>корзина.</em></h1></div>
+      <div id="basketRoot"></div>
+    </section>
+
+    
+            <!-- FOOTER -->
+            <footer class="site-footer" id="footer">
+                <div class="footer-inner footer-inner--five">
+                    <section class="footer-column footer-about">
+                        <h2 class="footer-title">ВКУС И КАЧЕСТВО</h2>
+                        <p>Карамелия — кондитерская, где классические рецепты встречаются с современной эстетикой. Мы
+                            создаём десерты
+                            вручную и уделяем внимание каждой детали — от первого вкуса до последнего штриха декора.</p>
+                    </section>
+
+                    <nav class="footer-column" aria-label="О нас">
+                        <h2 class="footer-title">О НАС</h2>
+                        <a href="about.html">История Карамелии</a>
+                        <a href="about.html#team">Наша команда</a>
+                        <a href="about.html#approach">Наш подход</a>
+                        <a href="about.html#reviews">Отзывы</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Помощь">
+                        <h2 class="footer-title">ПОМОЩЬ</h2>
+                        <a href="#faq">Доставка и оплата</a>
+                        <a href="#faq">Как оформить заказ</a>
+                        <a href="#faq">Частые вопросы</a>
+                        <a href="#faq">Условия заказа</a>
+                        <a href="#footer">Политика конфиденциальности</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Контакты">
+                        <h2 class="footer-title">КОНТАКТЫ</h2>
+                        <a href="tel:+79615495614">+7 961 549 56 14</a>
+                        <a href="mailto:hello@karameliya.ru">hello@karameliya.ru</a>
+                        <a href="#footer">Instagram</a>
+                        <a href="#footer">TikTok</a>
+                    </nav>
+
+                    <nav class="footer-column" aria-label="Продукция">
+                        <h2 class="footer-title">ПРОДУКЦИЯ</h2>
+                        <a href="catalog.html#cakes">Торты</a>
+                        <a href="catalog.html#desserts">Десерты</a>
+                        <a href="catalog.html#bakery">Выпечка</a>
+                        <a href="catalog.html#gift">Подарочные наборы</a>
+                    </nav>
+                </div>
+
+                <div class="footer-wordmark" aria-label="Karamelia">
+
+                    <div class="footer-wordmark-text">KAR<span>AME</span>LIA</div>
+                </div>
+
+                <div class="footer-meta">
+                    <div class="footer-meta-side footer-meta-left">© 2026 Karamelia. Все права защищены.</div>
+                    <div class="footer-partners" aria-label="Партнёры">
+                        <span>LUMIÈRE</span><span>MOKKA</span><span>VANILLE</span><span>MELLOW</span><span>NOIRÉ</span>
+                    </div>
+                    <div class="footer-meta-side footer-meta-right">Сделано с любовью к деталям и хорошему вкусу.</div>
+                </div>
+            </footer>
+  </main>
+
+  <div class="shop-modal" id="checkoutModal" hidden role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="shop-modal__panel"><div class="shop-modal__top"><h2 class="shop-modal__title" id="checkoutTitle">Проверьте данные.</h2><button class="shop-modal__close" type="button" data-close="checkoutModal">×</button></div><p class="shop-modal__text">Данные подставлены из личного кабинета. Перед оплатой их можно проверить и изменить для этого заказа.</p><div class="checkout-summary" id="checkoutSummary"></div><form class="shop-form" id="checkoutForm"><div class="shop-field"><label>ФИО</label><input name="fio" id="checkoutFio" required></div><div class="shop-form-grid"><div class="shop-field"><label>E-mail</label><input name="email" id="checkoutEmail" type="email" required></div><div class="shop-field"><label>Телефон</label><input name="phone" id="checkoutPhone" type="tel" required></div></div><div class="shop-field"><label>Адрес доставки</label><input name="address" id="checkoutAddress" required placeholder="Улица, дом, квартира"></div><div class="modal-actions"><button class="modal-btn outline" type="button" data-close="checkoutModal">Отмена</button><button class="modal-btn dark" type="submit">Подтвердить и оплатить</button></div></form></div></div>
+  <div class="shop-modal" id="paymentModal" hidden role="dialog" aria-modal="true" aria-labelledby="paymentTitle"><div class="shop-modal__panel"><div class="shop-modal__top"><h2 class="shop-modal__title" id="paymentTitle">Оплата заказа.</h2><button class="shop-modal__close" type="button" data-close="paymentModal">×</button></div><div class="checkout-summary" id="paymentSummary"></div><form class="shop-form payment-card" id="paymentForm"><div class="shop-field"><label>Номер карты</label><input id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" required></div><div class="shop-form-grid"><div class="shop-field"><label>Срок действия</label><input name="expiry" inputmode="numeric" maxlength="5" placeholder="ММ/ГГ" required></div><div class="shop-field"><label>CVV</label><input name="cvv" type="password" inputmode="numeric" maxlength="4" placeholder="•••" required></div></div><div class="shop-field"><label>Имя держателя</label><input name="holder" required placeholder="ИМЯ ФАМИЛИЯ"></div><button class="modal-btn caramel" type="submit">Оплатить заказ</button></form></div></div>
+  <div class="shop-modal" id="successModal" hidden role="dialog" aria-modal="true" aria-labelledby="successTitle"><div class="shop-modal__panel"><div class="success-state"><div class="success-mark">✓</div><h3 id="successTitle">Заказ оплачен.</h3><p id="successText">Заказ успешно оплачен. Курьер в пути.</p><div class="modal-actions" style="justify-content:center"><a class="modal-btn dark" href="account.html">Личный кабинет</a><button class="modal-btn outline" type="button" data-close="successModal">Вернуться в корзину</button></div></div></div></div>
+  <div class="shop-toast" id="shopToast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script><script src="js/app.js"></script><script src="js/basket.js"></script>
+</body>
+</html>

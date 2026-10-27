@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Карамелия — история кондитерской, команда, подход и преимущества." />
+  <title>О нас — Карамелия</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="icon" type="image/x-icon" href="assets/branding/favicon.ico">
+</head>
+
+<body>
+  <main class="about-page">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-fallback">КАРАМЕЛИЯ</span><img
+          src="assets/branding/logo.png" alt="Карамелия"
+          onerror="this.style.display='none'; this.previousElementSibling.style.display='inline';" /></a>
+      <nav class="main-nav"><a class="nav-link" href="index.html">ГЛАВНАЯ</a><a class="nav-link active"
+          href="about.html">О НАС</a><a class="nav-link" href="catalog.html">НАШИ ВКУСНОСТИ</a><a class="nav-link"
+          href="#footer">КОНТАКТЫ</a></nav>
+      <div class="header-actions"><a class="icon-btn" href="basket.html" aria-label="Корзина"><svg viewBox="0 0 24 24">
+            <path d="M6 7h12l-1 12H7L6 7Zm3 0a3 3 0 0 1 6 0" />
+            <path d="M4 7h16" />
+          </svg></a><a class="icon-btn" href="account.html" aria-label="Профиль"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5" />
+          </svg></a></div>
+      <a class="phone-link" href="tel:+79615495614">+7 961 549 56 14</a>
+      <button class="mobile-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="index.html">ГЛАВНАЯ</a>
+      <a href="about.html">О НАС</a>
+      <a href="catalog.html">НАШИ ВКУСНОСТИ</a>
+      <a href="#footer">КОНТАКТЫ</a>
+      <a href="tel:+79615495614">+7 961 549 56 14</a>
+    </div>
+    <!-- 01. Наша история -->
+    <section class="simple-section about-history" aria-labelledby="history-title">
+      <div class="about-history__content reveal">
+        <p class="about-kicker">КОНДИТЕРСКАЯ КАРАМЕЛИЯ</p>
+        <h1 id="history-title">О нашей истории</h1>
+        <p class="about-history__text">
+          «Карамелия» выросла из любви к домашним праздникам, красивой подаче и десертам,
+          которые хочется запомнить. Мы бережно соединяем классические рецептуры,
+          современные вкусы и эстетику ручной работы, чтобы каждый торт и каждый маленький
+          десерт становились частью особенного момента.
+        </p>
+      </div>
+
+      <svg class="history-drip" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          d="M0 78 C90 18 170 18 260 75 C350 132 420 132 505 74 C600 9 665 6 742 66 C818 126 885 131 968 72 C1049 14 1131 12 1210 69 C1294 129 1360 128 1440 69 L1440 190 L0 190 Z" />
+        <path class="history-drip__drops"
+          d="M205 65 C205 65 207 102 207 123 C207 143 193 154 179 144 C168 136 170 119 175 105 C181 89 191 75 205 65 Z M770 63 C770 63 771 105 773 135 C774 157 759 170 744 159 C732 150 734 130 741 112 C748 92 758 75 770 63 Z M1288 65 C1288 65 1290 102 1291 126 C1292 148 1278 159 1264 149 C1253 141 1255 122 1261 106 C1268 87 1278 72 1288 65 Z" />
+      </svg>
+    </section>
+
+    <!-- 02. Наша команда -->
+    <section class="about-section about-team" id="team" aria-labelledby="team-title">
+      <div class="section-shell team-shell">
+        <div class="team-media reveal">
+          <span class="team-media__wash" aria-hidden="true"></span>
+          <img src="assets/about/aboutteam2.png" alt="Команда Карамелии за работой" />
+          <span class="team-media__caption">Люди, которые превращают идеи во вкус</span>
+        </div>
+
+        <div class="team-copy reveal reveal-delay-1">
+          <p class="about-kicker about-kicker--light">ЛЮБОВЬ К ДЕЛУ</p>
+          <h2 id="team-title">Наша команда</h2>
+          <p class="team-lead">
+            За каждым десертом «Карамелии» стоят люди, которым одинаково важны вкус,
+            аккуратность и настроение готового изделия. Мы работаем как одна команда —
+            от первого эскиза до последнего штриха декора.
+          </p>
+
+          <div class="team-list" aria-label="Кондитеры Карамелии">
+            <div class="team-member">
+              <span class="team-member__number">01</span>
+              <div><strong>Александр Беляев</strong><span>торты и авторская подача</span></div>
+            </div>
+            <div class="team-member">
+              <span class="team-member__number">02</span>
+              <div><strong>Максим Орлов</strong><span>шоколад, карамель и ореховые вкусы</span></div>
+            </div>
+            <div class="team-member">
+              <span class="team-member__number">03</span>
+              <div><strong>Дмитрий Воронцов</strong><span>праздничные торты и сложный декор</span></div>
+            </div>
+          </div>
+
+          <div class="socials reveal reveal-delay-3" aria-label="Мы в социальных сетях">
+            <a href="#" aria-label="Facebook" class="social-icon"><img src="assets/icons/facebook 1.png" alt=""></a>
+            <a href="#" aria-label="Instagram" class="social-icon"><img src="assets/icons/instagram 1.png" alt=""></a>
+            <a href="#" aria-label="Pinterest" class="social-icon"><img src="assets/icons/pinterest 1.png" alt=""></a>
+            <a href="#" aria-label="TikTok" class="social-icon"><img src="assets/icons/tiktok 1.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-decor team-decor--one" aria-hidden="true"></div>
+      <div class="team-decor team-decor--two" aria-hidden="true"></div>
+      <span class="team-line team-line--one" aria-hidden="true"></span>
+      <span class="team-line team-line--two" aria-hidden="true"></span>
+    </section>
+
+    <!-- 03. Наш подход -->
+    <section class="about-section about-approach" id="approach" aria-labelledby="approach-title">
+      <div class="section-shell approach-shell">
+        <div class="approach-copy reveal">
+          <p class="about-kicker about-kicker--dark">ВКУС КАК ИСКУССТВО</p>
+          <h2 id="approach-title">Наш подход</h2>
+          <p>
+            Мы начинаем не с украшения, а со вкуса. Подбираем сочетания так, чтобы каждый
+            слой раскрывался постепенно, а внешний вид поддерживал характер десерта.
+            Ручная работа позволяет нам оставлять в каждой вещи небольшую долю
+            индивидуальности — именно она делает её вашей.
+          </p>
+          <p>
+            Нам важны чистые формы, выразительные текстуры и спокойная, продуманная эстетика
+            «Карамелии»: ничего лишнего, только вкус, детали и настроение момента.
+          </p>
+          <a class="about-cta" href="catalog.html">Смотреть наши вкусности</a>
+        </div>
+
+        <div class="approach-visual reveal reveal-delay-1">
+          <span class="approach-visual__ring" aria-hidden="true"></span>
+          <span class="approach-visual__dot" aria-hidden="true"></span>
+          <img src="assets/decorations/chocolate-cake.png" alt="Шоколадный десерт Карамелии" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Наши преимущества -->
+    <section class="about-section about-benefits" id="benefits" aria-labelledby="benefits-title">
+      <div class="section-shell benefits-shell">
+        <div class="benefits-heading reveal">
+          <p class="about-kicker about-kicker--light">ПОЧЕМУ КАРАМЕЛИЯ</p>
+          <h2 id="benefits-title">Преимущества Карамелии</h2>
+          <p>
+            Мы создаём не просто сладкое угощение, а цельное впечатление — от первого взгляда
+            до последнего кусочка.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefits-column benefits-column--left">
+            <article class="benefit-card reveal">
+              <span>01</span>
+              <h3>Авторская работа</h3>
+              <p>Каждый торт собирается и оформляется вручную с вниманием к мелочам.</p>
+            </article>
+            <article class="benefit-card reveal reveal-delay-1">
+              <span>02</span>
+              <h3>Продуманный вкус</h3>
+              <p>Соединяем классические основы и современные сочетания без лишней сладости.</p>
+            </article>
+            <article class="benefit-card reveal reveal-delay-2">
+              <span>03</span>
+              <h3>Свежесть</h3>
+              <p>Готовим небольшими партиями, чтобы десерты сохраняли текстуру и аромат.</p>
+            </article>
+          </div>
+
+          <div class="benefits-cake reveal reveal-delay-1">
+            <span class="benefits-cake__halo" aria-hidden="true"></span>
+            <img src="assets/hero/hero-cake.png" alt="Фирменный торт Карамелии" />
+            <span class="benefits-cake__label">KARAMELIA</span>
+          </div>
+
+          <div class="benefits-column benefits-column--right">
+            <article class="benefit-card reveal">
+              <span>04</span>
+              <h3>Эстетика</h3>
+              <p>Внешний вид десерта продолжает его вкус и задаёт настроение праздника.</p>
+            </article>
+            <article class="benefit-card reveal reveal-delay-1">
+              <span>05</span>
+              <h3>Внимание к заказу</h3>
+              <p>Учитываем детали события, пожелания по вкусу и характер оформления.</p>
+            </article>
+            <article class="benefit-card reveal reveal-delay-2">
+              <span>06</span>
+              <h3>Тёплая подача</h3>
+              <p>Нам важно, чтобы процесс заказа был таким же приятным, как сам десерт.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <span class="benefits-ornament benefits-ornament--left" aria-hidden="true"></span>
+      <span class="benefits-ornament benefits-ornament--right" aria-hidden="true"></span>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+      <div class="footer-inner footer-inner--five">
+        <section class="footer-column footer-about">
+          <h2 class="footer-title">ВКУС И КАЧЕСТВО</h2>
+          <p>Карамелия — кондитерская, где классические рецепты встречаются с современной эстетикой. Мы создаём десерты
+            вручную и уделяем внимание каждой детали — от первого вкуса до последнего штриха декора.</p>
+        </section>
+
+        <nav class="footer-column" aria-label="О нас">
+          <h2 class="footer-title">О НАС</h2>
+          <a href="about.html">История Карамелии</a>
+          <a href="about.html#team">Наша команда</a>
+          <a href="about.html#approach">Наш подход</a>
+          <a href="about.html#reviews">Отзывы</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Помощь">
+          <h2 class="footer-title">ПОМОЩЬ</h2>
+          <a href="#faq">Доставка и оплата</a>
+          <a href="#faq">Как оформить заказ</a>
+          <a href="#faq">Частые вопросы</a>
+          <a href="#faq">Условия заказа</a>
+          <a href="#footer">Политика конфиденциальности</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Контакты">
+          <h2 class="footer-title">КОНТАКТЫ</h2>
+          <a href="tel:+79615495614">+7 961 549 56 14</a>
+          <a href="mailto:hello@karameliya.ru">hello@karameliya.ru</a>
+          <a href="#footer">Instagram</a>
+          <a href="#footer">TikTok</a>
+        </nav>
+
+        <nav class="footer-column" aria-label="Продукция">
+          <h2 class="footer-title">ПРОДУКЦИЯ</h2>
+          <a href="catalog.html#cakes">Торты</a>
+          <a href="catalog.html#desserts">Десерты</a>
+          <a href="catalog.html#bakery">Выпечка</a>
+          <a href="catalog.html#gift">Подарочные наборы</a>
+        </nav>
+      </div>
+
+      <div class="footer-wordmark" aria-label="Karamelia">
+        <div class="footer-wordmark-text">KAR<span>AME</span>LIA</div>
+      </div>
+
+      <div class="footer-meta">
+        <div class="footer-meta-side footer-meta-left">© 2026 Karamelia. Все права защищены.</div>
+        <div class="footer-partners" aria-label="Партнёры">
+          <span>LUMIÈRE</span><span>MOKKA</span><span>VANILLE</span><span>MELLOW</span><span>NOIRÉ</span>
+        </div>
+        <div class="footer-meta-side footer-meta-right">Сделано с любовью к деталям и хорошему вкусу.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
